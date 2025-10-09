@@ -308,12 +308,12 @@ a:focus {
 
 .slider_section .find_container form .form-control {
   width: 100%;
-  background-color: transparent;
+  /* background-color: transparent; */
   border: none;
   height: 45px;
   outline: none;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   border-radius: 5px;
   padding: 0 15px;
   background-color: #ffffff;
@@ -441,7 +441,9 @@ a:focus {
   content: "\f061";
   font-family: 'FontAwesome';
 }
-
+.hidden{
+  display: none;
+}
 .recipe_section .box {
   text-align: center;
   margin-top: 45px;
@@ -601,10 +603,19 @@ a:focus {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
+.about_section .detail-box a.no-style{
+  all: unset;
+  color: #4855fe;
+  cursor: pointer;
+}
 
 .about_section .detail-box a:hover {
   background-color: #ffe537;
   color: #000000;
+}
+.about_section .detail-box a.no-style:hover {
+  all: unset;
+  color: #ffe537;
 }
 
 .news_section .box {
@@ -797,4 +808,9 @@ a:focus {
 .footer_section p a {
   color: inherit;
 }
+
+
+
+
+
 /*# sourceMappingURL=style.css.map */

@@ -7,11 +7,7 @@ function getYear() {
 
 getYear();
 
-// toggle overlay menu
-function openNav() {
-    document.getElementById("myNav").classList.toggle("menu_width");
-    document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style");
-}
+
 
 // nice select
 $(document).ready(function () {
@@ -61,3 +57,10 @@ $(".slider_container").slick({
         }
     ]
 });
+function showRecipeSectionHome() {
+    document.getElementById("popular_recipe_containter").classList.remove("hidden");
+}
+
+var input = document.querySelector('input[name=ingredients]');
+
+    // init Tagify script on the above inputs

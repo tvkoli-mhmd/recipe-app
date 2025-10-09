@@ -12,7 +12,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Delfood</title>
+  <title>khoshmaz</title>
 
 
   <!-- bootstrap core css -->
@@ -34,7 +34,9 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
-
+  <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.polyfills.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -46,36 +48,9 @@
         <nav class="navbar navbar-expand-lg custom_nav-container">
           <a class="navbar-brand" href="index.html">
             <span>
-              Delfood
+              Khoshmaz
             </span>
           </a>
-          <div class="" id="">
-            <div class="User_option">
-              <a href="">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <span>Login</span>
-              </a>
-              <form class="form-inline ">
-                <input type="search" placeholder="Search" />
-                <button class="btn  nav_search-btn" type="submit">
-                  <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
-              </form>
-            </div>
-            <div class="custom_menu-btn">
-              <button onclick="openNav()">
-                <img src="images/menu.png" alt="">
-              </button>
-            </div>
-            <div id="myNav" class="overlay">
-              <div class="overlay-content">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="blog.html">Blog</a>
-                <a href="testimonial.html">Testimonial</a>
-              </div>
-            </div>
-          </div>
         </nav>
       </div>
     </header>
@@ -88,10 +63,10 @@
           <div class="col-lg-10 mx-auto">
             <div class="detail-box">
               <h1>
-                Discover Restuarant And Food
+                Discover new Recipes
               </h1>
               <p>
-                when looking at its layout. The point of using Lorem Ipsum
+                list all the ingredients you have and i'll send you a couple of recipes!
               </p>
             </div>
             <div class="find_container ">
@@ -101,17 +76,11 @@
                     <form>
                       <div class="form-row ">
                         <div class="form-group col-lg-5">
-                          <input type="text" class="form-control" id="inputHotel" placeholder="Restaurant Name">
-                        </div>
-                        <div class="form-group col-lg-3">
-                          <input type="text" class="form-control" id="inputLocation" placeholder="All Locations">
-                          <span class="location_icon">
-                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                          </span>
+                          <input type="text" class="form-control " id="inputHotel" placeholder="ingredients" name="ingredients" >
                         </div>
                         <div class="form-group col-lg-3">
                           <div class="btn-box">
-                            <button type="submit" class="btn ">Search</button>
+                            <button type="button" class="btn" onclick="showRecipeSectionHome()">Search</button>
                           </div>
                         </div>
                       </div>
@@ -172,7 +141,7 @@
 
   <!-- recipe section -->
 
-  <section class="recipe_section layout_padding-top">
+  <section class="recipe_section layout_padding-top hidden" id="popular_recipe_containter">
     <div class="container">
       <div class="heading_container heading_center">
         <h2>
@@ -226,56 +195,12 @@
           </div>
         </div>
       </div>
-      <div class="btn-box">
-        <a href="">
-          Order Now
-        </a>
-      </div>
     </div>
   </section>
 
   <!-- end recipe section -->
 
-  <!-- app section -->
 
-  <section class="app_section">
-    <div class="container">
-      <div class="col-md-9 mx-auto">
-        <div class="row">
-          <div class="col-md-7 col-lg-8">
-            <div class="detail-box">
-              <h2>
-                <span> Get the</span> <br>
-                Delfood App
-              </h2>
-              <p>
-                long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The poin
-              </p>
-              <div class="app_btn_box">
-                <a href="" class="mr-1">
-                  <img src="images/google_play.png" class="box-img" alt="">
-                </a>
-                <a href="">
-                  <img src="images/app_store.png" class="box-img" alt="">
-                </a>
-              </div>
-              <a href="" class="download_btn">
-                Download Now
-              </a>
-            </div>
-          </div>
-          <div class="col-md-5 col-lg-4">
-            <div class="img-box">
-              <img src="images/mobile.png" class="box-img" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- end app section -->
 
   <!-- about section -->
 
@@ -284,7 +209,7 @@
       <div class="col-md-11 col-lg-10 mx-auto">
         <div class="heading_container heading_center">
           <h2>
-            About Us
+            About Me
           </h2>
         </div>
         <div class="box">
@@ -295,11 +220,8 @@
           </div>
           <div class="detail-box">
             <p>
-              Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable
+              Passionate about building practical projects and exploring new ideas, I constantly seek to improve my skills and create useful tools. My journey includes learning, experimenting, and sharing knowledge. You can connect with me on Telegram at <a class="no-style" href="https://t.me/malmal_yo ">@malmal_yo</a> and explore my work on GitHub at <a class="no-style" href="https://github.com/tvkoli-mhmd">tvkoli-mhmd</a> . I enjoy blending creativity with logic to make projects that matter and inspire.
             </p>
-            <a href="">
-              <i class="fa fa-arrow-right" aria-hidden="true"></i>
-            </a>
           </div>
         </div>
       </div>
@@ -308,57 +230,6 @@
 
   <!-- end about section -->
 
-  <!-- news section -->
-
-  <section class="news_section">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Latest News
-        </h2>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="box">
-            <div class="img-box">
-              <img src="images/n1.jpg" class="box-img" alt="">
-            </div>
-            <div class="detail-box">
-              <h4>
-                Tasty Food For you
-              </h4>
-              <p>
-                there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined
-              </p>
-              <a href="">
-                <i class="fa fa-arrow-right" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="box">
-            <div class="img-box">
-              <img src="images/n2.jpg" class="box-img" alt="">
-            </div>
-            <div class="detail-box">
-              <h4>
-                Breakfast For you
-              </h4>
-              <p>
-                there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined
-              </p>
-              <a href="">
-                <i class="fa fa-arrow-right" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end news section -->
 
   <!-- client section -->
 
@@ -367,7 +238,7 @@
       <div class="col-md-11 col-lg-10 mx-auto">
         <div class="heading_container heading_center">
           <h2>
-            Testimonial
+            fun facts
           </h2>
         </div>
         <div id="customCarousel1" class="carousel slide" data-ride="carousel">
@@ -375,10 +246,10 @@
             <div class="carousel-item active">
               <div class="detail-box">
                 <h4>
-                  Virginia
+                  fun fact #1
                 </h4>
                 <p>
-                  Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, perspiciatis.
                 </p>
                 <i class="fa fa-quote-left" aria-hidden="true"></i>
               </div>
@@ -386,10 +257,10 @@
             <div class="carousel-item">
               <div class="detail-box">
                 <h4>
-                  Virginia
+                  fun fact #2
                 </h4>
                 <p>
-                  Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, est.
                 </p>
                 <i class="fa fa-quote-left" aria-hidden="true"></i>
               </div>
@@ -397,10 +268,10 @@
             <div class="carousel-item">
               <div class="detail-box">
                 <h4>
-                  Virginia
+                  fun fact #3
                 </h4>
                 <p>
-                  Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, corrupti.
                 </p>
                 <i class="fa fa-quote-left" aria-hidden="true"></i>
               </div>
@@ -426,13 +297,13 @@
     <section class="info_section ">
       <div class="container">
         <div class="contact_box">
-          <a href="">
-            <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <a href="https://github.com/tvkoli-mhmd">
+            <i class="fa fa-github" aria-hidden="true"></i>
           </a>
-          <a href="">
+          <a href="tel:+989029747806">
             <i class="fa fa-phone" aria-hidden="true"></i>
           </a>
-          <a href="">
+          <a href="mailto:tvkoli.mhmd@gmail.com">
             <i class="fa fa-envelope" aria-hidden="true"></i>
           </a>
         </div>
@@ -448,26 +319,16 @@
                 About
               </a>
             </li>
-            <li>
-              <a class="" href="blog.html">
-                Blog
-              </a>
-            </li>
-            <li>
-              <a class="" href="testimonial.html">
-                Testimonial
-              </a>
-            </li>
           </ul>
         </div>
         <div class="social_box">
-          <a href="">
-            <i class="fa fa-facebook" aria-hidden="true"></i>
+          <a href="https://t.me/malmal_yo">
+            <i class="fa fa-telegram" aria-hidden="true"></i>
           </a>
-          <a href="">
-            <i class="fa fa-twitter" aria-hidden="true"></i>
+          <a href="https://instagram.com/malmal.yo">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
           </a>
-          <a href="">
+          <a href="https://www.linkedin.com/">
             <i class="fa fa-linkedin" aria-hidden="true"></i>
           </a>
         </div>
@@ -480,9 +341,7 @@
     <footer class="footer_section">
       <div class="container">
         <p>
-          &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="https://html.design/">Free Html Templates</a><br>
-          Distributed By: <a href="https://themewagon.com/">ThemeWagon</a>
+          &copy; <span id="displayYear"></span> Khoshmaz. Simple. Smart. Delicious.
         </p>
       </div>
     </footer>

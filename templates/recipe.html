@@ -16,13 +16,13 @@
 
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css" />
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
 
   <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <link href="../static/css/font-awesome.min.css" rel="stylesheet" />
   <!-- nice select -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4=" crossorigin="anonymous" />
   <!-- slidck slider -->
@@ -31,9 +31,9 @@
 
 
   <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="../static/css/style.css" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+  <link href="../static/css/responsive.css" rel="stylesheet" />
 
 </head>
 
@@ -49,21 +49,6 @@
               Khoshmaz
             </span>
           </a>
-          <div class="" id="">
-            <div class="custom_menu-btn">
-              <button onclick="openNav()">
-                <img src="images/menu.png" alt="">
-              </button>
-            </div>
-            <div id="myNav" class="overlay">
-              <div class="overlay-content">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="blog.html">Blog</a>
-                <a href="testimonial.html">Testimonial</a>
-              </div>
-            </div>
-          </div>
         </nav>
       </div>
     </header>
@@ -77,19 +62,19 @@
     <div class="container">
       <div class="col-md-11 col-lg-10 mx-auto">
         <div class="heading_container heading_center">
-          <h2>
-            About Us
+          <h2 id="recipe_title_sub_page">
+            
           </h2>
         </div>
         <div class="box">
           <div class="col-md-7 mx-auto">
             <div class="img-box">
-              <img src="images/about-img.jpg" class="box-img" alt="">
+               <img src="" class="box-img" alt="" id="recipe_img_sub_page">
             </div>
           </div>
           <div class="detail-box">
             <p>
-              Passionate about building practical projects and exploring new ideas, I constantly seek to improve my skills and create useful tools. My journey includes learning, experimenting, and sharing knowledge. You can connect with me on Telegram at <a class="no-style" href="https://t.me/malmal_yo ">@malmal_yo</a> and explore my work on GitHub at <a class="no-style" href="https://github.com/tvkoli-mhmd">tvkoli-mhmd</a> . I enjoy blending creativity with logic to make projects that matter and inspire.
+              {{instructions}}
             </p>
           </div>
         </div>
@@ -104,49 +89,14 @@
     <section class="info_section ">
       <div class="container">
         <div class="contact_box">
-          <a href="">
-            <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <a href="https://github.com/tvkoli-mhmd">
+            <i class="fa fa-github" aria-hidden="true"></i>
           </a>
-          <a href="">
-            <i class="fa fa-phone" aria-hidden="true"></i>
+          <a href="https://t.me/malmal_yo">
+            <i class="fa fa-telegram" aria-hidden="true"></i>
           </a>
-          <a href="">
+          <a href="mailto:tvkoli.mhmd@gmail.com">
             <i class="fa fa-envelope" aria-hidden="true"></i>
-          </a>
-        </div>
-        <div class="info_links">
-          <ul>
-            <li class="active">
-              <a href="index.html">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="about.html">
-                About
-              </a>
-            </li>
-            <li>
-              <a class="" href="blog.html">
-                Blog
-              </a>
-            </li>
-            <li>
-              <a class="" href="testimonial.html">
-                Testimonial
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="social_box">
-          <a href="">
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-          </a>
-          <a href="">
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-          </a>
-          <a href="">
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
           </a>
         </div>
       </div>
@@ -158,9 +108,7 @@
     <footer class="footer_section">
       <div class="container">
         <p>
-          &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="https://html.design/">Free Html Templates</a><br>
-          Distributed By: <a href="https://themewagon.com/">ThemeWagon</a>
+          &copy; <span id="displayYear"></span> Khoshmaz. Simple. Smart. Delicious.
         </p>
       </div>
     </footer>
@@ -168,16 +116,19 @@
 
   </div>
   <!-- jQery -->
-  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="../static/js/jquery-3.4.1.min.js"></script>
   <!-- bootstrap js -->
-  <script src="js/bootstrap.js"></script>
+  <script src="../static/js/bootstrap.js"></script>
   <!-- slick  slider -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
   <!-- nice select -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script>
   <!-- custom js -->
-  <script src="js/custom.js"></script>
-
+  <script src="../static/js/custom.js"></script>
+  <script>
+    document.getElementById("recipe_title_sub_page").textContent = localStorage.getItem("recipeTitle{{recipe_id}}");
+    document.getElementById("recipe_img_sub_page").src = localStorage.getItem("recipeImg{{recipe_id}}");
+  </script>
 
 </body>
 

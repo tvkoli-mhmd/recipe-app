@@ -57,7 +57,25 @@ $(".slider_container").slick({
         }
     ]
 });
-function showRecipeSectionHome() {
-    document.getElementById("popular_recipe_containter").classList.remove("hidden");
+async function showRecipeSectionHome() {
+    const ingredients = document.getElementById("ingredients").value;
+    const response = await fetch("/search", {
+        method : "POST",
+        headers:{
+            "Content-Type": "application/json"
+        },
+        body:JSON.stringify({ ingredients })
+    });
+    data = await response.json();
+    recipes = data.recipes;
+    document.getElementById("popular_recipe_containter").style.display = "block";
+    for (let i = 0; i < recipes.length; i++) {
+        document.getElementById(`recipe_title${i+1}`).textContent=recipes[i].title;
+        document.getElementById(`recipe_img${i+1}`).src = recipes[i].img;
+        document.getElementById(`recipe_link${i+1}`).href=`/recipe/${recipes[i].id}`;
+        localStorage.setItem(`recipeTitle${recipes[i].id}`, recipes[i].title);
+        localStorage.setItem(`recipeImg${recipes[i].id}`, recipes[i].img);
+        
+    };
 }
 

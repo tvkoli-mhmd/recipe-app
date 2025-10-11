@@ -441,9 +441,7 @@ a:focus {
   content: "\f061";
   font-family: 'FontAwesome';
 }
-.hidden{
-  display: none;
-}
+
 .recipe_section .box {
   text-align: center;
   margin-top: 45px;

@@ -61,6 +61,3 @@ function showRecipeSectionHome() {
     document.getElementById("popular_recipe_containter").classList.remove("hidden");
 }
 
-var input = document.querySelector('input[name=ingredients]');
-
-    // init Tagify script on the above inputs

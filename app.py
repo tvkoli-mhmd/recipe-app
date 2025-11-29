@@ -4,7 +4,12 @@ app = Flask(__name__)
 API_KEY = "790d47bbf67d42688eb4542cb2e83949"
 @app.route("/")
 def home():
-    return render_template("index.html")
+    food_trivia_texts = []
+    for i in range(3):
+        #used another api key just for fun facts because it took too many points :(
+        random_trivia_txt = requests.get("https://api.spoonacular.com/food/trivia/random?apiKey=c55977c391cd4736af7961fb4e863a84").json()["text"]
+        food_trivia_texts.append(random_trivia_txt)
+    return render_template("index.html", food_trivia_texts=food_trivia_texts)
 @app.route("/search", methods=["POST"])
 def search():
     data = request.get_json()
